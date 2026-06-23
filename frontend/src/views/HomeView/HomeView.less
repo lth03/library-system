@@ -1,0 +1,201 @@
+@text-h: var(--text-h);
+@text: var(--text);
+@border: var(--border);
+@bg: var(--bg);
+@accent: var(--accent);
+@accent-bg: var(--accent-bg);
+
+.home-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: @bg;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 60px;
+  border-bottom: 1px solid @border;
+  background: @bg;
+
+  &-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: @text-h;
+    }
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+.theme-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: transparent;
+  border: 1px solid @border;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: @accent;
+    background: @accent-bg;
+  }
+}
+
+.user-info {
+  font-size: 14px;
+  color: @text;
+}
+
+.logout-btn {
+  padding: 6px 16px;
+  font-size: 13px;
+  color: @text;
+  background: transparent;
+  border: 1px solid @border;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #ef4444;
+    border-color: #ef4444;
+  }
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+@sidebar-width: 200px;
+@sidebar-collapsed-width: 60px;
+
+.sidebar {
+  width: @sidebar-width;
+  min-width: @sidebar-width;
+  display: flex;
+  flex-direction: column;
+  background: @bg;
+  border-right: 1px solid @border;
+  transition: width 0.3s ease, min-width 0.3s ease;
+  overflow: hidden;
+
+  &.collapsed {
+    width: @sidebar-collapsed-width;
+    min-width: @sidebar-collapsed-width;
+  }
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  flex: 1;
+}
+
+.sidebar-bottom {
+  border-top: 1px solid @border;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: @text;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: @accent-bg;
+    color: @accent;
+  }
+
+  .menu-icon {
+    font-size: 18px;
+    min-width: 24px;
+    text-align: center;
+  }
+
+  .menu-label {
+    overflow: hidden;
+  }
+}
+
+.logout-item:hover {
+  color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+.collapse-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  color: @text;
+  background: transparent;
+  border: none;
+  border-top: 1px solid @border;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: @accent-bg;
+    color: @accent;
+  }
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  color: @text;
+  overflow: auto;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: @text-h;
+    margin: 0;
+  }
+}
+
+.desc {
+  font-size: 14px;
+  color: @text;
+  margin: 0;
+}

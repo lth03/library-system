@@ -1,0 +1,6 @@
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.stat-card { display: flex; align-items: center; gap: 14px; padding: 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s;
+  &:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+  .stat-icon { font-size: 32px; line-height: 1; }
+  .stat-info { display: flex; flex-direction: column; .stat-value { font-size: 28px; font-weight: 700; color: var(--text-h); line-height: 1.2; } .stat-label { font-size: 13px; color: var(--text); margin-top: 2px; } }
+  &--warn .stat-value { color: #fa8c16; } }
