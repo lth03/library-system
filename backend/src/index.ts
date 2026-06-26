@@ -1,5 +1,5 @@
-import dotenv from 'dotenv';
-dotenv.config();
+// 必须在所有其他导入之前加载 .env，确保 database.ts 等模块能读到环境变量
+import 'dotenv/config';
 
 import express from 'express';
 import cors from 'cors';
