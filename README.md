@@ -217,3 +217,5 @@ npm run dev        # → http://localhost:5173
 浏览器打开 `http://localhost:5173` → 自动跳转登录页 → 输入 **admin / admin123** 登录。
 
 > 详细操作步骤请参阅 **[使用指南.md](./使用指南.md)**。
+
+如果您愿意还可以使用docker包装的开箱即用：https://github.com/lth03/project
